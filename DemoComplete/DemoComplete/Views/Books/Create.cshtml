@@ -1,0 +1,61 @@
+@model DemoComplete.Models.Book
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>Book</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="title" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="title" class="form-control" />
+                <span asp-validation-for="title" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="author" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="author" class="form-control" />
+                <span asp-validation-for="author" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="year_written" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="year_written" class="form-control" />
+                <span asp-validation-for="year_written" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="edition" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="edition" class="form-control" />
+                <span asp-validation-for="edition" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="price" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="price" type="number" class="form-control" />
+                <span asp-validation-for="price" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,39 @@
+@model IEnumerable<DemoComplete.Models.Book>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<div class="row">
+    @Html.ActionLink("New Book", "Create")
+</div>
+<br />
+<div class="row">
+    <table class="table table-bordered">
+
+        <thead>
+            <tr>
+                <td>title</td>
+                <td>author</td>
+                <td>year_written</td>
+                <td>edition</td>
+                <td>price</td>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.title</td>
+                <td>@item.author</td>
+                <td>@item.year_written</td>
+                <td>@item.edition</td>
+                <td>@item.price</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+
+
+</div>
